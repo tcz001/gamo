@@ -1,0 +1,22 @@
+{
+	"ImportPath": "github.com/tcz001/gamo",
+	"GoVersion": "go1.4.2",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/coreos/go-etcd/etcd",
+			"Comment": "v2.0.0-22-g9847b93",
+			"Rev": "9847b93751a5fbaf227b893d172cee0104ac6427"
+		},
+		{
+			"ImportPath": "github.com/ugorji/go/codec",
+			"Rev": "03e33114d4d60a1f37150325e15f51b0fa6fc4f6"
+		},
+		{
+			"ImportPath": "gopkg.in/check.v1",
+			"Rev": "11d3bc7aa68e238947792f30573146a3231fc0f1"
+		}
+	]
+}

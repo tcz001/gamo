@@ -6,13 +6,37 @@
 	],
 	"Deps": [
 		{
+			"ImportPath": "github.com/bradfitz/http2",
+			"Rev": "f8202bc903bda493ebba4aa54922d78430c2c42f"
+		},
+		{
 			"ImportPath": "github.com/coreos/go-etcd/etcd",
 			"Comment": "v2.0.0-22-g9847b93",
 			"Rev": "9847b93751a5fbaf227b893d172cee0104ac6427"
 		},
 		{
+			"ImportPath": "github.com/golang/protobuf/proto",
+			"Rev": "68c687dc49948540b356a6b47931c9be4fcd0245"
+		},
+		{
 			"ImportPath": "github.com/ugorji/go/codec",
 			"Rev": "03e33114d4d60a1f37150325e15f51b0fa6fc4f6"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "51854aba4682903632d14998d47781fe34e62a02"
+		},
+		{
+			"ImportPath": "golang.org/x/net/internal/timeseries",
+			"Rev": "51854aba4682903632d14998d47781fe34e62a02"
+		},
+		{
+			"ImportPath": "golang.org/x/net/trace",
+			"Rev": "51854aba4682903632d14998d47781fe34e62a02"
+		},
+		{
+			"ImportPath": "google.golang.org/grpc",
+			"Rev": "5a1c16b4e60c1417aa017dd2989e4d5486230e85"
 		},
 		{
 			"ImportPath": "gopkg.in/check.v1",

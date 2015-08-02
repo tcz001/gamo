@@ -4,7 +4,8 @@ lint:
 	golint ./...
 
 test:
-	go test -v ./... -cover
+	godep go test ./...
 
 deps:
-	./deps.sh
+	godep save ./...
+	go get github.com/golang/lint/golint

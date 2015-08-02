@@ -1,24 +1,26 @@
 package knife
 
 import (
+	"fmt"
+	"log"
 	"net"
 
 	"google.golang.org/grpc"
 )
 
+const _port uint = 50000
+
 //Server is the game Server instance
 type Server struct {
 	*grpc.Server
-	port string
+	port uint
 	lis  net.Listener
 }
 
-const _port = ":50000"
-
 //Init is to initialize a Serve instance
-func (s *Server) Init(port string) {
-	if port != "" {
-		s.port = port
+func (s *Server) Init(port ...uint) {
+	if port != nil {
+		s.port = port[0]
 	} else {
 		s.port = _port
 	}
@@ -31,11 +33,12 @@ func (s *Server) Stop() error {
 }
 
 //Start is to start a Serve instance
-func (s *Server) Start() error {
-	lis, err := net.Listen("tcp", s.port)
+func (s *Server) Start() {
+	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", s.port))
 	if err != nil {
-		return err
+		log.Fatalf("failed to listen: %v", err)
+		return
 	}
 	s.lis = lis
-	return nil
+	err = s.Serve(s.lis)
 }

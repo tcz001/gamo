@@ -9,8 +9,8 @@ import (
 func main() {
 	fmt.Println("Welcome to gamo kitchen")
 
-	fmt.Println("Server starting...")
+	fmt.Println("Server starting... ")
 	s := knife.Server{}
 	s.Init()
-	fmt.Println("Server started...")
+	s.Start()
 }

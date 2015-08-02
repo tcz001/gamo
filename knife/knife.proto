@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package proto;
+
+// Knife proto definition
+service KnifeService {
+	rpc Stream(stream Knife.Frame) returns (stream Knife.Frame);  // 透传消息, 双向流
+}
+
+message Knife {
+	enum FrameType {
+		Message = 0;
+		Register = 1;
+		Unregister = 2;
+		Kick = 3;
+		Ping = 4;	// for testing
+	}
+	message Frame {
+		FrameType Type=1;
+		bytes Message=2;
+		int32 UserId = 3;
+	}
+}

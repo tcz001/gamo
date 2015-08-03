@@ -25,6 +25,3 @@ gamo
 *.prof
 
 Godeps
-
-#proto buf
-*.pb.go

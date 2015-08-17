@@ -1,4 +1,4 @@
-default: deps lint test
+default: lint deps test
 
 lint:
 	golint ./...

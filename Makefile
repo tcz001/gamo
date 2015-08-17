@@ -1,4 +1,4 @@
-default: lint deps protobuf test
+default: lint protobuf deps test
 
 lint:
 	go get github.com/golang/lint/golint
@@ -14,6 +14,4 @@ protobuf:
 	protoc --go_out=plugins=grpc:knife/proto/. knife/knife.proto
 
 deps:
-	go get ./...
 	godep save ./...
-	go get github.com/golang/lint/golint

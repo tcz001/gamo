@@ -1,6 +1,7 @@
 default: lint deps test
 
 lint:
+	go get github.com/golang/lint/golint
 	golint ./...
 
 test:

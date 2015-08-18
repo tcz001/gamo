@@ -1,4 +1,4 @@
-default: lint protobuf deps test
+default: deps lint protobuf test
 
 lint:
 	go get github.com/golang/lint/golint

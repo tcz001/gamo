@@ -1,5 +1,5 @@
 language: go
 before_install:
-  - @sudo ./install-protobuf.sh
+  - ./install-protobuf.sh
 go:
   - tip

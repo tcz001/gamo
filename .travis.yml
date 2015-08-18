@@ -1,4 +1,7 @@
 language: go
+cache:
+  directories:
+  - $HOME/protobuf
 before_install:
   - ./install-protobuf.sh
 go:
